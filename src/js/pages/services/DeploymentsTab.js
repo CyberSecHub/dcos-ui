@@ -130,7 +130,7 @@ class DeploymentsTab extends mixin(StoreMixin) {
 
       return (
         <dd key={`service_${id}`}>
-          <Link to="services-detail" params={{id}} className="deployment-service-name table-cell-link-primary">
+          <Link to="/services/overview/:id" params={{id}} className="deployment-service-name table-cell-link-primary">
             <span className="icon icon-small icon-image-container icon-app-container deployment-service-icon">
               <img src={image} />
             </span>
@@ -422,4 +422,3 @@ DeploymentsTab.routeConfig = {
 };
 
 module.exports = DeploymentsTab;
-

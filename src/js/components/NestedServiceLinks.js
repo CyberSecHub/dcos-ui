@@ -12,9 +12,9 @@ class NestedServiceLinks extends React.Component {
         <div className={minorLinkClasses}>
           <Link
             className={minorLinkAnchorClasses}
-            to="services-detail"
-            params={params}
-            title={label}>
+            to="/services/overview/:id"
+              params={params}
+              title={label}>
             {label}
           </Link>
         </div>
@@ -79,7 +79,7 @@ class NestedServiceLinks extends React.Component {
     let label;
     let params;
     let {majorLinkAnchorClassName, serviceID, taskID} = this.props;
-    let routeName;
+    let routePath;
 
     let anchorClasses = classNames(
       'table-cell-link-primary',
@@ -92,11 +92,11 @@ class NestedServiceLinks extends React.Component {
         id: serviceID,
         taskID
       };
-      routeName = 'services-task-details';
+      routePath = '/services/overview/:id/tasks/:taskID';
     } else {
       label = this.getServicePathParts().pop();
       params = {id: encodeURIComponent(serviceID)};
-      routeName = 'services-detail';
+      routePath = '/services/overview/:id';
     }
 
     return (
@@ -127,7 +127,7 @@ class NestedServiceLinks extends React.Component {
        <div key={key} className="table-cell-value">
         <div className={minorLinkClasses}>
           <Link className={minorLinkAnchorClasses}
-            to="services-page"
+            to="/services"
             title="services">
             Services
           </Link>

@@ -68,7 +68,7 @@ var ServicesTable = React.createClass({
 
   onServiceDestroyModalClose() {
     this.closeDialog();
-    this.context.router.transitionTo('services-page');
+    this.context.router.transitionTo('/services');
   },
 
   onServiceSuspendModalClose() {
@@ -149,7 +149,7 @@ var ServicesTable = React.createClass({
     }
 
     return (
-      <Link to="services-detail"
+      <Link to="/services/overview/:id"
         className="table-cell-link-primary"
         params={{id}}>
         <span className="text-overflow">
@@ -187,7 +187,7 @@ var ServicesTable = React.createClass({
     return (
       <div className="service-table-heading flex-box
         flex-box-align-vertical-center table-cell-flex-box">
-        <Link to="services-detail"
+        <Link to="/services/overview/:id"
           className="table-cell-icon"
           params={{id}}>
           {this.getImage(service)}
@@ -396,7 +396,7 @@ var ServicesTable = React.createClass({
     return (
       <colgroup>
         <col />
-        <col className="status-bar-column" />
+        <col className="status-bar-column"/>
         <col className="hidden-small-down" style={{width: '65px'}} />
         <col className="hidden-small-down" style={{width: '75px'}} />
         <col className="hidden-small-down" style={{width: '65px'}} />

@@ -51,7 +51,7 @@ describe('ServicesTab', function () {
       ReactDOM.render(
         JestUtil.stubRouterContext(ServicesTab, {params: {id: '/'}}, {
           getCurrentRoutes() {
-            return [{name: 'services-task-details-tab'}];
+            return [{path: '/services/overview/:id/tasks/:taskID'}];
           }
         }),
         this.container
@@ -74,7 +74,7 @@ describe('ServicesTab', function () {
       ReactDOM.render(
         JestUtil.stubRouterContext(ServicesTab, {params: {id: '/'}}, {
           getCurrentRoutes() {
-            return [{name: 'services-task-details-tab'}];
+            return [{path: '/services/overview/:id/tasks/:taskID'}];
           }
         }),
         this.container
@@ -95,7 +95,7 @@ describe('ServicesTab', function () {
       var instance = ReactDOM.render(
         JestUtil.stubRouterContext(ServicesTab, {params: {id: '/pod'}}, {
           getCurrentRoutes() {
-            return [{name: 'services-task-details-tab'}];
+            return [{path: '/services/overview/:id/tasks/:taskID'}];
           }
         }),
         this.container
@@ -110,7 +110,7 @@ describe('ServicesTab', function () {
       var instance = ReactDOM.render(
         JestUtil.stubRouterContext(ServicesTab, {params: {id: '/'}}, {
           getCurrentRoutes() {
-            return [{name: 'services-task-details-tab'}];
+            return [{path: '/services/overview/:id/tasks/:taskID'}];
           }
         }),
         this.container
@@ -132,7 +132,7 @@ describe('ServicesTab', function () {
       var instance = ReactDOM.render(
         JestUtil.stubRouterContext(ServicesTab, {params: {id: '/gg'}}, {
           getCurrentRoutes() {
-            return [{name: 'services-task-details-tab'}];
+            return [{path: '/services/overview/:id/tasks/:taskID'}];
           }
         }),
         this.container
@@ -147,7 +147,7 @@ describe('ServicesTab', function () {
       var instance = ReactDOM.render(
         JestUtil.stubRouterContext(ServicesTab, {params: {id: '/alpha'}}, {
           getCurrentRoutes() {
-            return [{name: 'services-task-details-tab'}];
+            return [{path: '/services/overview/:id/tasks/:taskID'}];
           }
         }),
         this.container
@@ -163,7 +163,7 @@ describe('ServicesTab', function () {
       var instance = ReactDOM.render(
         JestUtil.stubRouterContext(ServicesTab, {params: {id: '/'}}, {
           getCurrentRoutes() {
-            return [{name: 'services-task-details-tab'}];
+            return [{path: '/services/overview/:id/tasks/:taskID'}];
           }
         }),
         this.container
@@ -180,7 +180,7 @@ describe('ServicesTab', function () {
       var instance = ReactDOM.render(
         JestUtil.stubRouterContext(ServicesTab, {params: {}}, {
           getCurrentRoutes() {
-            return [{name: 'services-task-details-tab'}];
+            return [{path: '/services/overview/:id/tasks/:taskID'}];
           }
         }),
         this.container

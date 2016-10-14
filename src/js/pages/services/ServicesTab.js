@@ -181,7 +181,7 @@ var ServicesTab = React.createClass({
 
   getNotFoundFooter() {
     return (
-      <Link to="services-page" className="button button-stroke">
+      <Link to="/services" className="button button-stroke">
         Go back to Services Page
       </Link>
     );

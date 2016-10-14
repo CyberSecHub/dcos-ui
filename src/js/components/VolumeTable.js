@@ -132,23 +132,23 @@ class VolumeTable extends React.Component {
     let id = row[prop];
     let params = {volumeID: global.encodeURIComponent(id)};
     let routes = this.context.router.getCurrentRoutes();
-    let currentRouteName = routes[routes.length - 1].name;
-    let routeName = null;
+    let currentroutePath = routes[routes.length - 1].path;
+    let routePath = null;
 
-    if (currentRouteName === 'services-detail') {
-      routeName = 'service-volume-details';
+    if (currentroutePath === '/services/overview/:id') {
+      routePath = '/services/overview/:id/volumes/:volumeID';
       params.id = this.props.params.id;
-    } else if (currentRouteName === 'services-task-details-volumes') {
-      routeName = 'service-task-details-volume-details';
+    } else if (currentroutePath === '/services/overview/:id/tasks/:taskID/volumes') {
+      routePath = '/services/overview/:id/tasks/:taskID/volumes/:volumeID';
       params.id = this.props.params.id;
       params.taskID = this.props.params.taskID;
-    } else if (currentRouteName === 'nodes-task-details-volumes') {
-      routeName = 'item-volume-detail';
+    } else if (currentroutePath === '/nodes/:nodeID/tasks/:taskID/volumes') {
+      routePath = '/nodes/:nodeID/tasks/:taskID/volumes/:volumeID';
       params.nodeID = this.props.params.nodeID;
       params.taskID = this.props.params.taskID;
     }
 
-    return <Link to={routeName} params={params}>{id}</Link>;
+    return <Link to={routePath} params={params}>{id}</Link>;
   }
 
   renderStatusColumn(prop, row) {
